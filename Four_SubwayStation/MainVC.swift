@@ -42,13 +42,13 @@ private extension MainVC {
         self.tableView.separatorStyle = .none
     }
     
-    func requestStationName(stationName : String){
+    func requestStationName(stationName : String, resultVC : ResultSearchVC){
         let urlString = "http://openapi.seoul.go.kr:8088/sample/json/SearchInfoBySubwayNameService/1/5/\(stationName)"
-        AF.request(urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "").responseDecodable(of: StationModel.self){ [weak self] response in
+        AF.request(urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "").responseDecodable(of: StationModel.self){response in
             switch response.result{
             case let .success(data):
                 print(data)
-                self?.stations = data.SearchInfoBySubwayNameService.row
+                resultVC.stations = data.SearchInfoBySubwayNameService.row
             case let .failure(error):
                 print(error)
             }
@@ -79,14 +79,12 @@ extension MainVC : UISearchBarDelegate{
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.requestStationName(stationName: searchText)
     }
 }
 
 extension MainVC : UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        let resultVC = searchController.searchResultsController as? ResultSearchVC
-        resultVC?.stations = self.stations
-        print(resultVC)
+        guard let resultVC = searchController.searchResultsController as? ResultSearchVC else {return}
+        self.requestStationName(stationName: searchController.searchBar.text ?? "", resultVC: resultVC)
     }
 }
