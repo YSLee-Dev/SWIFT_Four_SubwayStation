@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D4AF2A1628B782C200345D37 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF2A1528B782C200345D37 /* DetailVC.swift */; };
 		D4AF2A1828B7837500345D37 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AF2A1728B7837500345D37 /* DetailCell.swift */; };
+		D4B3126428BC460E00D66110 /* ResultSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3126328BC460E00D66110 /* ResultSearchVC.swift */; };
+		D4B4CF9028BCBD5500E63D97 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4CF8F28BCBD5500E63D97 /* StationModel.swift */; };
 		D4CDA0EA28B38AD60007E426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDA0E928B38AD60007E426 /* AppDelegate.swift */; };
 		D4CDA0EC28B38AD60007E426 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDA0EB28B38AD60007E426 /* SceneDelegate.swift */; };
 		D4CDA0EE28B38AD60007E426 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CDA0ED28B38AD60007E426 /* MainVC.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		D4AF2A1528B782C200345D37 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		D4AF2A1728B7837500345D37 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		D4B3126328BC460E00D66110 /* ResultSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchVC.swift; sourceTree = "<group>"; };
+		D4B4CF8F28BCBD5500E63D97 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
 		D4CDA0E628B38AD60007E426 /* Four_SubwayStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Four_SubwayStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CDA0E928B38AD60007E426 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4CDA0EB28B38AD60007E426 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				D4CDA0E928B38AD60007E426 /* AppDelegate.swift */,
 				D4CDA0EB28B38AD60007E426 /* SceneDelegate.swift */,
 				D4CDA0ED28B38AD60007E426 /* MainVC.swift */,
+				D4B4CF8F28BCBD5500E63D97 /* StationModel.swift */,
+				D4B3126328BC460E00D66110 /* ResultSearchVC.swift */,
 				D4AF2A1528B782C200345D37 /* DetailVC.swift */,
 				D4AF2A1728B7837500345D37 /* DetailCell.swift */,
 				D4CDA10628B77A560007E426 /* SubwayListCell.swift */,
@@ -159,6 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B4CF9028BCBD5500E63D97 /* StationModel.swift in Sources */,
+				D4B3126428BC460E00D66110 /* ResultSearchVC.swift in Sources */,
 				D4AF2A1628B782C200345D37 /* DetailVC.swift in Sources */,
 				D4CDA0EE28B38AD60007E426 /* MainVC.swift in Sources */,
 				D4AF2A1828B7837500345D37 /* DetailCell.swift in Sources */,

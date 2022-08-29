@@ -12,8 +12,17 @@ import SnapKit
 
 class DetailVC : UITableViewController{
     
+    lazy var viewRefreshControl = UIRefreshControl().then{
+        $0.addTarget(self, action: #selector(fetchData), for: .valueChanged)
+    }
+    
     override func viewDidLoad() {
         self.viewSet()
+    }
+    
+    @objc func fetchData(){
+        print("데이터 리로드")
+        self.refreshControl?.endRefreshing()
     }
 }
 
@@ -32,8 +41,10 @@ extension DetailVC {
     
     
     func viewSet(){
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         self.tableView = UITableView(frame: .zero, style: .insetGrouped)
         self.tableView.register(DetailCell.self, forCellReuseIdentifier: "cell")
         self.title = "교대역"
+        self.tableView.refreshControl = self.viewRefreshControl
     }
 }
