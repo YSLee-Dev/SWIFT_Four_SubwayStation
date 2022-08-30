@@ -47,7 +47,7 @@ extension ResultSearchVC{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detail = UINavigationController(rootViewController: DetailVC())
+        let detail = UINavigationController(rootViewController: DetailVC(row: self.stations[indexPath.row]))
         self.present(detail, animated: true)
     }
 }
